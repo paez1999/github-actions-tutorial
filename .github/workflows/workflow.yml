@@ -1,6 +1,7 @@
 name: main-workflow
 
-env: {}
+env:
+  IMAGE_REPOSITORY: TU_USUARIO_DOCKERHUB/foobar
 
 on:
   push:
