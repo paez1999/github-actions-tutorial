@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - master
+      - awesome-feature
 
   pull_request:
     branches:
