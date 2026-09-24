@@ -7,11 +7,13 @@ on:
     branches:
       - master
       - awesome-feature
+      - awesome-feature-2
 
   pull_request:
     branches:
       - master
       - awesome-feature
+      - awesome-feature-2
 
 jobs:
   run-tests:
