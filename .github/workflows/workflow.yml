@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - master
+      - awesome-feature
   pull_request:
     branches:
       - master
+      - awesome-feature
 jobs:
   # Run all unit tests.
   run-tests:
