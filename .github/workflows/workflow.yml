@@ -1,5 +1,6 @@
 name: main-worklfow
 on:
+  workflow_dispatch:
   push:
     branches:
       - master

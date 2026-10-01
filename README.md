@@ -2,6 +2,21 @@
 
 [![main-worklfow](https://github.com/paez1999/github-actions-tutorial/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/paez1999/github-actions-tutorial/actions/workflows/workflow.yml)
 
+## Cómo lanzar el workflow y ver los logs
+
+**Lanzarlo**
+
+- Automáticamente: haciendo `push` a `master` o abriendo una pull request hacia `master`.
+- Manualmente: pestaña **Actions** → **main-worklfow** → **Run workflow** → elegir la rama → **Run workflow**.
+
+**Ver los logs**
+
+1. Ve a la pestaña **Actions** del repositorio (o haz clic en el badge de arriba).
+2. Abre la ejecución que te interese.
+3. Haz clic en el job (`run-tests`, `build-and-release`) y despliega el paso para ver su salida.
+
+Con la CLI de GitHub: `gh run list` y `gh run view <id> --log` (usa `--log-failed` para ver solo los pasos que fallan).
+
 This tutorial will guide you through building a functional CI/CD pipeline with
 Github Actions. You will create a workflow that automatically runs unit tests on
 all pull requests, and deploys the latest version of the master branch to a
