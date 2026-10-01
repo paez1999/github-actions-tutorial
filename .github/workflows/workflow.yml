@@ -8,6 +8,8 @@ on:
     branches:
       - master
       - awesome-feature
+env:
+  IMAGE_REPOSITORY: placeholder-user/foobar
 jobs:
   # Run all unit tests.
   run-tests:
@@ -26,3 +28,18 @@ jobs:
       # Run unit tests.
       - name: Run unit tests
         run: go test -v ./...
+
+  # Build and release.
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v3
+      - name: Build and push container image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: ${{ env.IMAGE_REPOSITORY }}
+          tag_with_ref: true
+          tag_with_sha: true
