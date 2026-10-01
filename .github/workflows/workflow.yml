@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - awesome-feature
   pull_request:
     branches:
       - master
+      - awesome-feature
 env:
   IMAGE_REPOSITORY: placeholder-user/foobar
 jobs:
